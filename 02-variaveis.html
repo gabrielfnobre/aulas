@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a>Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a>Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a>Formatação de Numbers</a></li>
+            <li class="itens"><a>Formatação de Strings</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#oqueeumavariavel">O que é uma variável?</a></li>
+                <li><a href="#comocriamosumavariavel">Como criamos uma variável?</a></li>
+                <li><a href="#regrasdenomeacaodasvariaveis">Regras de nomeação das variáveis</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -295px;">
+    <h1>Variáveis</h1>
+        <h2 id="oqueeumavariavel">O que é uma variável?</h2>
+            <p>Podemos entender bem o conceito de variável usando como exemplo um estacionamento automóveis que atende aos mais variados tipos de veículos, Nele podemos estacionar desde motos até caminhões. O computador é da mesma forma, mas a sua diferença é que o computador guarda dados invés de veículos. Mas assim como não podemos guardar um caminhão na vaga de uma moto, o mesmo se dá com os computadores, onde determinadas variáveis, como as "strings" por exemplo, não podem ser encaradas como "numbers" e assim por diante. </p>
+        <h2 id="comocriamosumavariavel">Como criamos uma variável?</h2>
+            <p>Para criar variáveis em JavaScript é muito fácil, desde que tenhamos aberto um espaço no nosso código de programação para o "script" basta nós digitarmos o seletor "var" e dar nome a variável, seguindo depois com o seu <a href="01-tiposprimitivos.html" target="_blank">Tipo Primitivo</a>.</p>
+                <ul>
+                    <li><span id="lista">var - </span>usamos esse seletor para abrir o espaço para uma variável;</li>
+                    <li><span id="lista">" = " - </span>o sinal de " = " é usado chamado no JavaScript de "recebe", pois ele se trata mesmo de uma forma de identificar um valor que uma determinada variável irá receber;</li>
+                    <li><span id="lista">Tipo Primitivo - </span>logo após o sinal de " = " é preciso mostrar ao JavaScript qual é o tipo primitivo do sinal que você vai receber, por exeplo: String, Number e etc;</li>
+                </ul>
+            <p>A declaração de uma variável ficaria mais ou menos assim:</p>
+            <p><span id="lista">var</span> <span id="expl">"n1" (nome dado a variável)</span><span id="lista"> = String</span><span id="adic">(window.prompt("Digite seu nome: ")); "essa programação JavaScript faz com que uma janela seja aberta pedindo que a pessoa digite seu nome."</span></p>
+        <h2 id="regrasdenomeacaodasvariaveis">Regras de nomeação das variáveis</h2>
+            <p>Para nomearmos variáveis temos de seguir algumas regras importantes, que são:</p>
+                <ul>
+                    <li>Podemos começar com <span id="lista">letras, $ </span>ou <span id="lista">_</span>;</li>
+                    <li>Não podemos começar com <span id="lista">números</span>;</li>
+                    <li>É possível usar <span id="lista">letra </span>ou <span id="lista">números</span>;</li>
+                    <li>É possível usar <span id="lista">acentos </span>e <span id="lista">símbolos</span>;</li>
+                    <li>Não podemos usar <span id="lista">espaços</span>;</li>
+                    <li>Não podemos usar <span id="lista">palavras reservadas</span>;</li>
+                </ul>
+    </div>
+</body>
+</html>

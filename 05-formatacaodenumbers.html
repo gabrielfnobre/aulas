@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a href="03-conversaodenumbersparastring.html">Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a href="04-conversaodestringparanumbers">Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a href="05-formatacaodenumbers.html">Formatação de Numbers</a></li>
+            <li class="itens"><a>Formatação de Strings</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#qualaimportanciadaformatacaodenumbers">Qual a importância da formatacao de Numbers?</a></li>
+                <li><a href="#tiposdeformatadoresdenumbers">Tipos de formatadores de Numbers?</a></li>
+                <li><a href="#comopodemosusarformatadoresdenumbers">Como podemos usar formatadores de Numbers?</a></li>
+                <li><a href="#tofixed">.toFixed(n)</a></li>
+                <li><a href="#replace">.replace('.', ',')</a></li>
+                <li><a href="#tolocalestring">.toLocaleString( )</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -475px;">
+    <h1>Formatação de Numbers</h1>
+        <h2 id="qualaimportanciadaformatacaodenumbers">Qual a importância da formatação de Numbers?</h2>
+            <p>Nós seres humanos, não somos como os computadores que conseguem enteder tudo através de uma simples seqüência de números binários. Os números para nós têm significado e formatações diferentes, por exemplo: <strong>150</strong> não é a mesma coisa que <strong>R$ 150,00</strong>, e etc. É muito importante que os nossos sites também possam utilizar essas formatações com facilidade, afinal precisamos de receber e transmitir dados precisos aos visitantes do nosso site.</p>
+            <p>Portanto, como podemos fazer essa formatações de Numbers em JavaScript?</p>
+        <h2 id="tiposdeformatadoresdenumbers">Tipos de formatadores de Numbers?</h2>
+            <p>Podemos fazer formatações em Numbers das seguintes maneiras:</p>
+            <ul>
+                <li><span id="lista">.toFixed(</span>n<span id="lista">) - </span>Com esse atributo podemos adicionar quantas casas depois da vírgulas nós quisermos para os nossos números;</li>
+                <li><span id="lista">.replace('</span>.<span id="lista">', '</span>,<span id="lista">') - </span>Com esse atributo podemos trocar o "ponto" por "vírgula", para mostrarmos ao usuário um formato de valor que ele está acostumado aqui no Brasil;</li>
+                <li><span id="lista">.toLocaleString('</span>pt-BR<span id="lista">'</span>, {style: 'currency', currency: 'BRL'}<span id="lista">)</span>, Com esse atributo podemos formatar qualquer Number digitado para que ele apareça no formato monetário do país que nós quisermos;</li>
+            </ul>
+        <h2 id="comopodemosusarformatadoresdenumbers">Como podemos usar formatadores de Numbers?</h2>
+            <p>Podemos usar formatadores de Numbers das seguintes maneiras:</p>
+            <p id="tofixed"><span id="lista">.toFixed(</span>n<span id="lista">)</span></p>
+            <p>var n1 = Number(window.prompt("Por favor digite o seu salário, não precisa digitar o valor dos centavos e nem a vírgula, só o número inteiro: "));
+            <p>window.alert(`O valor do seu salário é de: ${n1<span id="lista">.toFixed(2)</span>}`);
+            <p><span id="expl">(Usando o atributo ".toFixed(n)" logo após o valor da nossa variável, e colocando o número de casas que queremos depois do ponto, nós conseguimos formatar um número inteiro digitado pelo usuário em número de ponto flutuante. Para verificar como isso acontece na prática, por favor entre neste <a href="../exercicios/ex009.html">link</a>.)</span></p>
+            <p id="replace"><span id="lista">.replace('</span>.<span id="lista">', '</span>,<span id="lista">')</span></p>
+            <p>var n1 = Number(window.prompt(`Por favor digite o seu salário usando "ponto" no lugar da "vírgula": `));
+            <p>window.alert(`O valor do seu salário com a vírgula é de: ${n1.toFixed(2)<span id="lista">.replace('</span>.<span id="lista">', '</span>,<span id="lista">')</span>}`);
+            <p><span id="expl">(Usando o atributo ".replace('.', ',')" nós conseguimos trocar um número que foi escrito com "ponto flutuante" para um número com "vírgula", segundo o costume brasileiro. <span id="adic">(Obs: O replace só funcionará se a numeração tiver números de ponto fixo após a vírgula, ou seja, ele só pode ser usado em conjunto com o atributo ".toFixed(n)".) </span>Para verificar como isso acontece na prática, por favor entre neste <a href="../exercicios/ex010.html">link</a>.)</span></p>
+            <p id="tolocalestring"><span id="lista">.toLocaleString( )</span></p>
+            <p>var n1 = Number(window.prompt(`Por favor digite o seu salário sem usar "ponto" ou "vírgula", somente o número inteiro: `));
+            <p>window.alert(`O valor do seu salário, segundo código monetário do seu país, é de: ${n1<span id="lista">.toLocaleString('</span>pt-BR<span id="lista">'</span>, {style: 'currency', currency: 'BRL'}<span id="lista">)</span>}`);
+            <p><span id="expl">(Usando o atributo ".toLocaleString( )" nós conseguimos trocar um número escrito de qualquer forma, para um número monetário do país que nós quisermos. <span id="adic">(Isso é possível usando o código de linguagem do país por através do "pt-BR", usando a tag "style", onde nós definimos qual é a mudança de propriedade que vai acontecer ao número graças ao valor "currency", que é o valor do moeda corrente no país atribuído ao valor em currency que vai logo à frente, que é o "BRL". Toda essa mudança faz com que o valor de "n1" formate-se em uma string que revela o valor monetário do país.) </span>Para verificar como isso acontece na prática, por favor entre neste <a href="../exercicios/ex008.html">link</a>.)</span></p>
+    </div>
+</body>
+</html>

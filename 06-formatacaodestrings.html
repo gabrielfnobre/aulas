@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a href="03-conversaodenumbersparastring.html">Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a href="04-conversaodestringparanumbers">Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a href="05-formatacaodenumbers.html">Formatação de Numbers</a></li>
+            <li class="itens"><a href="06-formatacaodestrings.html">Formatação de Strings</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#qualaimportanciadaformatacaodestrings">Qual a importância da formatacao de Strings?</a></li>
+                <li><a href="#tiposdeformatadoresdestrings">Tipos de formatadores de Strings?</a></li>
+                <li><a href="#comopodemosusarformatadoresdestrings">Como podemos usar formatadores de Strings?</a></li>
+                <li><a href="#aspas">Áspas duplas ou simples</a></li>
+                <li><a href="#crase">Cráse</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -445px;">
+    <h1>Formatação de Strings</h1>
+        <h2 id="qualaimportanciadaformatacaodestrings">Qual a importância da formatação de Strings?</h2>
+            <p>Muitas vezes vamos precisar de usar modelos diferentes de strings, seja para concatenar palavras, seja para utilizarmos modelos diferentes de strings para que um determinado código funcione.</p>
+            <p>Sendo assim, quais são os tipos de strings que existem? E como podemos utilizá-las em JavaScript?</p>
+        <h2 id="tiposdeformatadoresdestrings">Tipos de formatadores de Strings</h2>
+            <p>Podemos fazer formatações em Strings das seguintes maneiras:</p>
+            <ul>
+                <li><span id="lista">Usando áspas simples ou duplas - </span>O uso de áspas dentro do JavaScript sempre é empregado para quando nós queremos usar caracteres;</li>
+                <li><span id="lista">Usando a cráse - </span>O uso da cráse é empregado sempre que nós desejamos identificar um conjunto de palavras como caracteres, porém com a vantagem de poder fazer interpolação e não apenas concatenação;</li>
+            </ul>
+        <h2 id="comopodemosusarformatadoresdestrings">Como podemos usar formatadores de Strings?</h2>
+            <p>Podemos usar formatadores de Strings das seguintes maneiras:</p>
+            <p id="aspas"><span id="lista">Áspas duplas ou simples</span></p>
+            <p>var n1 = window.prompt(<span id="lista">"</span>Digite seu nome: <span id="lista">"</span>);
+            <p>var n2 = window.prompt(<span id="lista">"</span>Digite a sua idade: <span id="lista">"</span>);
+            <p>window.alert(<span id="lista">"</span>Seu nome é <span id="lista">"</span> + n1 + <span id="lista">"</span> e você tem <span id="lista">"</span> + n2 + <span id="lista">"</span> anos.<span id="lista">"</span>);
+            <p><span id="expl">(Não importa se você usa áspas duplas ou simples, você vai conseguir gerar cadeias de caracteres do tipo string. Porém, cadeias de caracteres que utilizam áspas não podem fazer interpolação, <span id="adic">(Interpolação é quando nós conseguimos adicionar outros elementos dentro de uma única cadeia de caracteres sem a necessidade de usar o sinal de concatenação. No exemplo acima vemos que precisavámos de criar várias cadeias de caracteres abrindo e fechando com áspas e concatenando com  variáveis somente para gerar uma única frase, essa é a grande desvantagem das áspas.)</span> somente concatenação. Para verificar como isso acontece na prática, por favor entre neste <a href="../exercicios/ex011.html">link</a>.)</span></p>
+            <p id="crase"><span id="lista">Cráse</span></p>
+            <p>var n1 = window.prompt(<span id="lista">`</span>Digite seu nome: <span id="lista">`</span>);
+            <p>var n2 = window.prompt(<span id="lista">`</span>Digite a sua idade: <span id="lista">`</span>);
+            <p>window.alert(<span id="lista">`</span>Seu nome é <span id="adic">${</span>n1<span id="adic">}</span> e você tem <span id="adic">${</span>n2<span id="adic">}</span> anos.<span id="lista">`</span>);
+            <p><span id="expl">(Note que com a utilização da cráse nós precisamos somente de uma cadeia de caracteres e para a fazer a interpolação das variáveis nós utilizamos "place-holder" por através do sinal ${}.<span id="adic">(Place-Holder ou "Lugar Reservado", é uma propriedade JavaScript que reserva uma variável para um determinado uso ou formatação em conjunto a outros elementos. Veja que utilizando place-holder dentro da cadeia de caracteres que está cráseado, nós não precisamos de usar o sinal de concatenação e nem ficar usando a cráse a cada conjunto de palavras que fechamos antes de juntar as palavras ás variáveis. Essa é a grande vantagem do uso da cráse em strings, a simplicidade. Sem falar que ela permite o uso de outras sinalizações dentro duma cadeia de caracteres, por exemplo sinalizações que o JavaScript interpretaria como comandos, como por exemplo as próprias áspas.)</span> Para verificar como isso acontece na prática, por favor entre neste <a href="../exercicios/ex012.html">link</a>.)</span></p>
+    </div>
+</body>
+</html>

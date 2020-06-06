@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a>Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a>Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a>Formatação de Numbers</a></li>
+            <li class="itens"><a>Formatação de Strings</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#oquesaotiposprimitivos">O que são Tipos Primitivos?</a></li>
+                <li><a href="#quaissaoostiposprimitivos">Quais são os Tipos Primitivos?</a></li>
+                <li><a href="#number">Number</a></li>
+                <li><a href="#string">String</a></li>
+                <li><a href="#boolean">Boolean</a></li>
+                <li><a href="#null">Null</a></li>
+                <li><a href="#undefined">Undefined</a></li>
+                <li><a href="#object">Object</a></li>
+                <li><a href="#function">Function</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -475px;">
+    <h1>Tipos Primitivos</h1>
+        <h2 id="oquesaotiposprimitivos">O que são Tipos Primitivos?</h2>
+            <p>Tipos Primitivos são todos os elementos com os quais o JavaScript trabalha, assim como em html trabalhamos com números, caracteres, objetos e etc, no JavaScript é a mesma coisa com algumas diferenças.</p>
+            <p>É importantíssimo entender esse conceito, pois entender a diferença entre os tipos primitivos é o que vai nos permitir usar bem as nossas variáveis. Assim como vimos o exemplo de um estacionamento no artigo sobre <a href="02-variaveis.html" target="_blank">variáveis</a>, o mesmo conceito se vale aqui quando falamos de Tipos Primitivos. Assim como um caminhão tem 6 rodas e não pode caber na vaga de uma moto, o mesmo se dá com os Tipo Primitivos, eles são formados de características diferentes, e um Tipo Primitivo Number não pode ocupar uma variável reservada a uma String a menos que a conversão correta dos tipos seja feita.</p>
+            <h2 id="quaissaoostiposprimitivos">Quais são os Tipos Primitivos?</h2>
+                <ul>
+                    <li id="number"><span id="lista">Number - </span>Esse é o tipo primitivo que representa os números, como por exemplo o conjunto de <span id="expl">números Reais</span> (1, 2, 3..) e o conjunto de <span id="expl">números Inteiros</span> (1,5, 2,5, 3,5...) ou de <span id="expl">Ponto Flutuante</span>, chamamos de ponto flutuante por que para serem reconhecidos pelo JavaScript é necessário o uso do "ponto" ao invés da "vírgula". (1.5, 2.5, 3.5...) Dentro da cadeia dos tipos primitivos Number encontramos também 2 tipos primitivos específicos, os: <span id="expl">Infinity</span> e o <span id="expl">NaN</span>, que falaremos melhor em outro artigo;</li>
+                    <li id="string"><span id="lista">String - </span>Esse é o tipo primitivo que representa os caracteres, como: <span id="expl">letras</span>, <span id="expl">ideogramas</span> e até mesmo <span id="expl">números representativos</span>, como o <span id="expl">CPF</span>, <span id="expl">RG</span>, <span id="expl">CNH</span> e etc. Para representarmos os strings nós sempre usamos <span id="expl">áspas duplas ou simples "" ''</span> e a <span id="expl">crase ``</span>. Em geral o uso de áspas duplas ou simples não faz diferença quando escrevemos caracteres em JavaScript, mas o uso da crase faz uma grande diferença, pois usamos a crase como um <span id="expl">"template string"</span>, ou <strong>"formatação string"</strong>, que nada mais é do que quando nós desejamos criar uma string que irá concatenar as palavras com outros elementos de fora;</li>
+                    <li id="boolean"><span id="lista">Boolean - </span>Esse é o tipo primitivo que representa as portas booleanas de George Boole, as famosas: <span id="expl">true</span> e <span id="expl">false</span>, entre muitas outras. Falaremos mais a respeito delas em outro artigo;</li>
+                    <li id="null"><span id="lista">Null - </span>Esse é o tipo primitivo que representa os elementos <span id="expl">nulos</span>, cuidado para não confundir com os Undefineds, pois os tipos nulos são encarados pelo JavaScript como um objeto;
+                    <li id="undefined"><span id="lista">Undefined - </span>Esse é o tipo primitivo que representa os elementos <span id="expl">indenidos</span>, algumas pessoas confundem com os tipos nulos, mas o Undefined é um elemento sem definição enquanto o null é encarado pelo JavaScript como um Object;</li>
+                    <li id="object"><span id="lista">Object - </span>Esse é o tipo primitivo que representa os <span id="expl">Objetos</span>, para representarmos objetos dentro do JavaScript basta nós utilizarmos as <span id="expl">chaves { }.</span> Dentro dos Object temos um outro tipo primitivo incluso, que é o <span id="expl">array</span>, mais conhecido como <span id="expl">vetor</span> que também são enxergados pelo JavaScript como objetos e podem ser representados pelos sinais de <span id="expl">colchetes [ ]</span>;</li>
+                    <li id="function"><span id="lista">Function - </span>Esse é o tipo primitivo que representa as <span id="expl">Funções</span> em JavaScript, como as fuctions funcionam dentro do paradigma funcional do JavaScript, elas também são consideradas como Tipos Primitivos;</li>
+                </ul>
+                <div id="exc">
+                    <p>Faça o seguinte exercício:</p>
+                    <p>Entre no terminal e tente usar o comando "typeof" abrindo variáveis de todos os tipos primitivos e veja como ele identifica cada uma das variáveis.</p>
+                </div>
+    </div>
+</body>
+</html>

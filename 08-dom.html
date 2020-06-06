@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+    <style>
+        div#arvore{
+            background: rgba(255, 0, 128);
+            margin: auto;
+            margin-bottom: 0px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+            position: relative;
+            font-size: 16pt;
+            line-height: 30px;
+            box-shadow: 2px 2px 5px black;
+            opacity: 0.7;
+        }
+        div#inline{
+            background: rgb(255, 0, 128);
+            box-shadow: 2px 2px 5px black;
+            margin: 0px 45px 0px 0px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            font-size: 16pt;
+            line-height: 30px;
+            opacity: 0.7;
+        }
+        div#neutro{
+            position: relative;
+            font-size: 20pt;
+            margin: 0px;
+            padding: 0px;
+            line-height: 20px;
+            opacity: 0.7;
+        }
+        div#neutroduo{
+            position: relative;
+            font-size: 20pt;
+            display: inline;
+            margin: 0px;
+            padding: 0px;
+            line-height: 20px;
+            letter-spacing: -3px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a href="03-conversaodenumbersparastring.html">Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a href="04-conversaodestringparanumbers">Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a href="08-dom.html">DOM</a></li>
+            <li class="itens"><a href="05-formatacaodenumbers.html">Formatação de Numbers</a></li>
+            <li class="itens"><a href="06-formatacaodestrings.html">Formatação de Strings</a></li>
+            <li class="itens"><a href="07-operadoresnumericos.html">Operadores utilizados em JavaScript</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#dom">O que é o DOM?</a></li></br>
+                <li><a href="#elementoschildepatern">Elementos Child e Patern</a></li></br>
+                <li><a href="#window">Window</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+                <li><a href="#?">?</a></li></br>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -295px;">
+        <h1>DOM</h1>
+            <h2 id="dom">O que é o DOM?</h2>
+                <p>DOM é um acrônimo para <span id="expl">"Document Object Model"</span>, em português: <span id="expl">"Modelo de Objetos do Documento"</span>. O que ele faz? Como o próprio nome diz, ele forma um <span id="lista">padrão (Model)</span> de como os <span id="lista">elementos (Objects)</span> devem estar dispostos dentro de um <span id="lista">documento (Document)</span> html para que um browser (navegador) possa identificá-los e lê-los.</p>
+                <p>O DOM é formado pelo que chamamos de árvore DOM, assim como uma árvore é dividida em várias partes que formam uma árvore inteira, o DOM é divido em várias partes também. Vejamos um exemplo prático logo abaixo:</p>
+                <div style="padding: 50px 0px;background-image: url(../imagens/arvore.jpg); background-repeat: no-repeat; background-size: 900px 600px; background-position: center;">
+                    
+                <div id="arvore">
+                < strong >
+                </div>
+                        <div id="neutro" style="left: 497px;">
+                            |
+                        </div>
+                <div id="inline" style="margin-left: 95px; margin-bottom: 10px;">
+                < h1 >
+                </div>
+                <div id="inline">
+                < p >
+                </div>
+                <div id="inline">
+                < p >
+                </div>
+                <div id="inline">
+                < div >
+                </div></br>
+                        <div id="neutroduo" style="left: 158px; top: -10px">
+                            |______________|______________|______________|
+                        </div></br>
+                        <div id="neutroduo" style="left: 497px; top: -17px;">
+                            |
+                        </div>
+                        <div id="neutroduo" style="left: 488.5px; top: 8px;">
+                            |
+                        </div>
+                <div id="inline" style="margin-left: 604px;">
+                < title >
+                </div>
+                <div id="inline">
+                < meta >
+                </div></br>
+                        <div id="neutroduo" style="left: 497px; top: -4px;">
+                        |
+                        </div>
+                        <div id="neutroduo" style="left: 660px;">
+                        |
+                        </div>
+                        <div id="neutroduo" style="left: 716px;">
+                        _________|
+                        </div></br>
+                <div id="inline" style="margin-left: 440px;">
+                < body >
+                </div>
+                <div id="inline">
+                < head >
+                </div></br>
+                        <div id="neutroduo" style="left: 497px;">
+                        |
+                        </div>
+                        <div id="neutroduo" style="left: 552px;">
+                        _________|</div>
+                <div id="arvore">
+                < html >
+                </div></br>
+                        <div id="neutroduo" style="left: 497px; top: -20px;">
+                        |
+                        </div>
+                        <div id="neutroduo" style="left: 488.5px; top: -5px;">
+                        |
+                        </div></br>
+                <div id="inline" style="margin-left: 268px;">
+                location
+                </div>
+                <div id="inline">
+                document
+                </div>
+                <div id="inline">
+                history
+                </div></br>
+                        <div id="neutroduo" style="left: 327.5px;">
+                            |______________|______________|
+                        </div></br>
+                        <div id="neutro" style="left: 497px;">
+                            |
+                        </div>
+                <div id="arvore">
+                window
+                </div>
+                </div></br>
+            
+                <h2 id="window">Window - "A Raiz"</h2>
+                <p>Assim como toda árvore é sustentada pela sua raiz, na árvore DOM não é diferente, tudo o que é carregado e lido pelo browser é sustentado pelo elemento <span id="lista">window</span>, ou seja <span id="expl">"Janela"</span>. O elemento window serve como uma espécie de <span id="lista">"raiz imaginária"</span> que suporta todos os elementos da árvore DOM que formam a sua página e são carregados na janela do seu navegador.</p>
+
+                <h3 id="elementoschildepatern">Elementos Child e Patern</h3>
+
+                <p>Nas linguagens de programação temos o que chamamos de elemento <span id="expl">Child</span> e elemento <span id="expl">Patern</span>, que traduzidos para a nossa língua significa <span id="adic">"elemento criança"</span> e <span id="adic">"elemento parente"</span>, mas aqui ficaram vulgarizados como <span id="expl">"elemento Filho"</span> e <span id="expl">"elemento Pai"</span>. (O que facilita muito o uso e o entendimento deles.) Todo elemento gerador de outro é chamado de elemento Parent (Pai) e todo elemento gerado por outro nós chamamos de elemento Child do elemento que o gerou. O elemento <span id="lista">window por exemplo não é Child de ninguém</span>, mas ele é <span id="lista">Patern de todos os outros elementos</span>. No exemplo da árvore acima, podemos a sequência de elementos <span id="expl">Child´s</span> e elementos <span id="expl">Patern´s</span> da seguinte forma:</br></br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">strong -</span> Child da tag <span id="adic">"p"</span>;</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">p -</span> Child da tag <span id="adic">"body"</span> e Patern da tag <span id="adic">"strong"</span>;</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">body -</span> Child da tag <span id="adic">"html"</span> e Patern das tags <span id="adic">"p´s"</span>, <span id="adic">"div"</span> e <span id="adic">"h1"</span>;</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">html -</span> Child do elemento <span id="adic">"document"</span> e Patern das tags <span id="adic">"body"</span> e <span id="adic">"head"</span>;</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">document -</span> Child do elemento <span id="adic">"window"</span> e Patern da tag <span id="adic">"html"</span>;</br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">window -</span> Child de ninguém, mas Patern dos elementos <span id="adic">"location"</span>, <span id="adic">"document"</span> e <span id="adic">"history"</span>;</br>
+                
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a href="03-conversaodenumbersparastring.html">Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a href="04-conversaodestringparanumbers">Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a>Formatação de Numbers</a></li>
+            <li class="itens"><a>Formatação de Strings</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#qualaimportanciadaconversaoentrestringsenumbers">Qual a importância da conversão entre Strings e Numbers?</a></li>
+                <li><a href="#comoconverterstringsparanumbers">Como Converter Strings para Numbers?</a></li>
+                <li><a href="#parseint">Number.parseInt()</a></li>
+                <li><a href="#parsefloat">Number.parseFloat()</a></li>
+                <li><a href="#number">Number()</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -385px;">
+    <h1>Conversão de Strings para Numbers</h1>
+        <h2 id="qualaimportanciadaconversaoentrestringsenumbers">Qual a importância da conversão entre Strings e Numbers?</h2>
+            <p>É de total importância, afinal o JavaScript trabalha com funções numéricas, booleanas, strings e de objetos ao mesmo tempo. A identificação correta do valor que nós estamos trabalhando é vital para que o JavaScript entenda como ele deve trabalhar de acordo com determinado valor.</p>
+            <p>Por exemplo imagine a confusão no seguinte caso:</p>
+            <p><span id="adic">var n1 = window.prompt("Digite um número: ");</span></p>
+            <p><span id="adic">var n2 = window.prompt("Digite outro número: ");</span></p>
+            <p><span id="adic">var s = n1 + n2;</span></p>
+            <p><span id="adic">window.alert("A soma dos valores é" + s);</span></p>
+            <p><span id="expl">(No exemplo acima temos um script de duas janelas que se abrem em uma página pedindo que o usuário digite duas numerações para serem somadas e uma janela de alerta se abriria revelando a soma, porém, como as janelas foram escritas para <a href="01-tiposprimitivos.html" target="_blank">tipos primitivos</a> strings, o JavaScript não vai somar os números, em vez disso irá concatená-los. Para ver como isso acontece, <a href="../exercicios/ex001.html">click neste link.</a>)</span></p>
+            <p>Como resolver esse problema? Convertendo os <a href="01-tiposprimitivos.html" target="_blank">tipo primitivos</a> strings para numbers.</p>
+        <h2 id="comoconverterstringsparanumbers">Como Converter Strings para Numbers?</h2>
+            <p>Para converter strings para numbers nós podemos utilizar 3 comandos conversores:</p>
+            <ul>
+                <li><span id="lista">Number.parseInt() - </span>Esse é um conversor de numbers apenas do <span id="expl">tipo inteiro</span>, <span id="expl">(1, 2, 3...)</span> isso significa que ele nunca mostrará números reais, ou seja, de ponto flutuante.</li>
+                <li><span id="lista">Number.parseFloat() - </span>Esse é um conversor de numbers apenas do <span id="expl">tipo real</span>, <span id="expl">(1.5, 2.5, 3.5...)</span> isso significa que tem a capacidade de gerar números de ponto flutuante.</li>
+                <li><span id="lista">Number() - </span>Esse é um conversor para numbers tanto do tipo <span id="expl">inteiro </span>quanto para numbers tipo <span id="expl">ponto flutuante</span>, definí-los como ponto flutuante ou não fica a cargo do navegador.</li>
+            </ul>
+            <p>Como fazemos para utilizá-los em um comando real?</p>
+            <p>Vejamos exemplos com cada um deles:</p>
+            <p id="parseint"><span id="lista">"Number.parseInt()":</span></p>
+            <p>var n1 = <span id="adic">Number.parseInt(</span>window.prompt("Digite um número: ")<span id="adic">)</span>;</p>
+            <p>var n2 = <span id="adic">Number.parseInt(</span>window.prompt("Digite outro número: ")<span id="adic">)</span>;</p>
+            <p>var s = n1 + n2;</p>
+            <p>window.alert("A soma dos valores é" + s);</p>
+            <p><span id="adic">(Note como nós utilizamos o Number.parseInt(), colocamos todo o elemento gerador da variável dentro no conversor Number.parseInt(). Para ver o resultado disso, <a href="../exercicios/ex002.html">click neste link.</a>)</span></p>
+            <p id="parsefloat"><span id="lista">"Number.parseFloat()":</span></p>
+            <p>var n1 = <span id="adic">Number.parseFloat(</span>window.prompt("Digite um número real usando "ponto" e não "vírgula": ")<span id="adic">)</span>;</p>
+            <p>var n2 = <span id="adic">Number.parseFloat(</span>window.prompt("Digite outro número real usando "ponto" e não "vírgula": ")<span id="adic">)</span>;</p>
+            <p>var s = n1 + n2;</p>
+            <p>window.alert("A soma dos valores é" + s);</p>
+            <p><span id="adic">(Note como nós utilizamos o Number.parseFloat(), colocamos todo o elemento gerador da variável dentro no conversor Number.parseFloat(). Para ver o resultado disso, <a href="../exercicios/ex003.html">click neste link.</a>)</span></p>
+            <p id="number"><span id="lista">"Number()":</span></p>
+            <p>var n1 = <span id="adic">Number(</span>window.prompt("Digite qualquer número, real ou inteiro: ")<span id="adic">)</span>;</p>
+            <p>var n2 = <span id="adic">Number(</span>window.prompt("Digite qualquer número, real ou inteiro: ")<span id="adic">)</span>;</p>
+            <p>var s = n1 + n2;</p>
+            <p>window.alert("A soma dos valores é" + s);</p>
+            <p><span id="adic">(Note como nós utilizamos o Number(), colocamos todo o elemento gerador da variável dentro no conversor Number(). Para ver o resultado disso, <a href="../exercicios/ex004.html">click neste link.</a>)</span></p>
+    </div>
+</body>
+</html>

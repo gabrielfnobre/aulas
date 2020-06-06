@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a href="03-conversaodenumbersparastring.html">Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a href="04-conversaodestringparanumbers">Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a href="05-formatacaodenumbers.html">Formatação de Numbers</a></li>
+            <li class="itens"><a href="06-formatacaodestrings.html">Formatação de Strings</a></li>
+            <li class="itens"><a href="07-operadoresnumericos.html">Operadores utilizados em JavaScript</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#operadoresnumericos">Operadores</a></li></br>
+                <li><a href="#quetipodeoperaocesmatematicasojavascriptecapazdefazer">Que tipo de operações o JavaScript é capaz de fazer?</a></li></br>
+                <li><a href="#operadoresaritmeticos">Operadores Aritméticos</a></li></br>
+                <li><a href="#precedenciadeoperadores">Precedência de Operadores Aritméticos</a></li></br>
+                <li><a href="#operadoresdeatribuicao">Operadores de Atribuição</a></li></br>
+                <li><a href="#atribuicaosimples">Atribuição Simples</a></li></br>
+                <li><a href="#autoatribuicao">Auto-atribuição</a></li></br>
+                <li><a href="#autoatribuicaosimplificada">Auto-atribuição Simplificada</a></li></br>
+                <li><a href="#autoincremento">Auto-incremento e Auto-decremento</a></li></br>
+                <li><a href="#preincremento">Pré-incremento e Pré-decremento</a></li></br>
+                <li><a href="#operadoresrelacionais">Operadores Relacionais</a></li></br>
+                <li><a href="#maior">Maior</a></li></br>
+                <li><a href="#menor">Menor</a></li></br>
+                <li><a href="#maiorouigual">Maior ou Igual</a></li></br>
+                <li><a href="#menorouigual">Menor ou Igual</a></li></br>
+                <li><a href="#igual">Igual</a></li></br>
+                <li><a href="#diferente">Diferente</a></li></br>
+                <li><a href="#igualcomrestricoes">Igualdade com Restrições</a></li></br>
+                <li><a href="#desigualdadecomrestricoes">Desigualdade com Restrições</a></li></br>
+                <li><a href="#operadoreslogicos">Operadores Lógicos</a></li></br>
+                <li><a href="#negacao">Negação</a></li></br>
+                <li><a href="#conjuncao">Conjunção</a></li></br>
+                <li><a href="#disjuncao">Disjunção</a></li></br>
+                <li><a href="#precedencialogicos">Ordem de Precedência dos Operadores Lógicos</a></li></br>
+                <li><a href="#operadoresternarios">Operadores Ternários</a></li></br>
+                <li><a href="#relacaodeprecedenciadeoperadores">Relação de Precedência de Operadores</a></li></br>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -1597px;">
+    <h1>Operadores utilizados em JavaScript</h1>
+        <h2 id="operadoresnumericos">Operadores</h2>
+            <p>Antes de ser uma simples ferramenta de interação entre um site e seus usuários, o JavaScript é uma ferramenta de fazer contas, portas lógicas e muitos outros tipos de operações matemáticas. Afinal, estamos falando de uma linguagem de programação para computadores, e computadores na sua essência não passam de calculadoras super potentes capazes de usar a matemática para resolver questões complexas.</p>
+        <h2 id="quetipodeoperaocesmatematicasojavascriptecapazdefazer">Que tipo de operações matemáticas o JavaScript é capaz de fazer?</h2>
+            <p>O JavaScript é capaz de fazer operações:</p>
+                <ul>
+                    <li><span id="lista">Aritméticas - </span>usando a operadores aritméticos que já conhecemos;</li></br>
+                    <li><span id="lista">Atribuições - </span>usando o valor de um operador e atribuindo-o sobre outro operador;</li></br>
+                    <li><span id="lista">Relacionais - </span>para estabelecer relações entre 2 ou mais valores, que resultará na aplicação de um valor booleano (true ou false);</li></br>
+                    <li><span id="lista">Lógicos - </span>para fazer operações sobre portas lógicas;</li></br>
+                    <li><span id="lista">Ternários - </span>para fazer operações condicionais;</li></br>
+                    <li><span id="lista">Typeof - </span>para indicar tipos primitivos;</li></br>
+                </ul>
+        <h2 id="operadoresaritmeticos">Operadores Aritméticos</h2>
+                <p>Os operadores aritméticos que nós utilizamos no JavaScript são:</p>
+                    <ul>
+                        <li><span id="lista">Soma - </span> Utilizamos por através do sinal de " + "; </br><span id="expl">Ex: 5 + 2 = 7</span><span id="adic"></br> (Nessa questão nós devemos tomar cuidado, pois o sinal de " + " também é usado para concatenar strings, se os nossos valores não estiverem devidamente identificados como numbers, a soma não será feita da maneira correta.)</span></li></br>
+                        <li><span id="lista">Subtração - </span> Utilizamos por através do sinal de " - ";</br><span id="expl">Ex: 5 - 2 = 3</span></li></br>
+                        <li><span id="lista">Multiplicação - </span> Utilizamos por através do sinal de " * ";</br><span id="expl">Ex: 5 * 2 = 10</span></li></br>
+                        <li><span id="lista">Divisão Real- </span> Utilizamos por através do sinal de " / ";</br><span id="expl">Ex: 5 / 2 = 2.5</span></li></br>
+                        <li><span id="lista">Divisão Inteira - </span> Utilizamos por através do sinal de " % ";</br><span id="expl">Ex: 5 % 2 = 1</span></br><span id="adic">(O valor final desse operador sempre será o resultado do resto de uma divisão de números inteiros.</span></li></br>
+                        <li><span id="lista">Potência - </span> Utilizamos por através do sinal de " ** ";</br><span id="expl">Ex: 5 ** 2 = 25</span></br><span id="adic">(Onde um número elevado sobre uma determinada potência sempre será multiplicado por ele mesmo o número de vezes que a sua potência exigir.)</span></li></br>
+                    </ul>
+        <h2 id="precedenciadeoperadores">Precedência de Operadores Aritméticos</h2>
+                <p>Os operadores aritméticos tem de obedecer a uma ordem de precedêcia, entender isso é importante para criarmos comandos corretos no JavaScript. Como funciona essa ordem de precedência?</p>
+                    <ul>
+                        <li>1º - Tudo oque estiver entre <span id="lista">( )</span> "parênteses";
+                        </br><span id="expl">Ex: <span id="lista">(</span>5 + 3<span id="lista">)</span> / 2</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 / 2 = 4</span>
+                        </li></br>
+                        <li>2º - As operações de <span id="lista">**</span> "potência";</br><span id="expl">Ex: 5 + 3 <span id="lista">**</span> 2</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 + 9 = 14</span></li></br>
+                        <li>3º - As operações de <span id="lista">*</span> "multiplicação" <span id="lista">/</span> "divisão real" <span id="lista">%</span> "divisão inteira"; <span id="adic">(Quando nós temos dois operadores da mesma ordem de precedência em uma operação, fazemos primeiro aquela que vem primeiro, por exemplo: 5 * 3 / 2, a primeira operação a ser feita nesse caso seria 5 * 3, e só depois nós faríamos a / 2.</span></br><span id="expl">Ex: 5 + 3 <span id="lista">*</span> 2</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 + 6 = 11</span></br>
+                        </br><span id="expl">Ex: 5 + 3 <span id="lista">/</span> 2</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 + 1.5 = 6.5</span></br>
+                        </br><span id="expl">Ex: 5 + 3 <span id="lista">%</span> 2 = 6</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 + 1 = 6</span></li></br>
+                        <li>4º - As operações de <span id="lista">+</span> "soma" <span id="lista">-</span> "subtração";</br><span id="expl">Ex: 5 <span id="lista">+</span> 3 * 2</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 <span id="lista">+</span> 6 = 11</span></br>
+                        </br><span id="expl">Ex: 5 <span id="lista">-</span> 3 * 2</span>
+                        </br><span id="expl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 <span id="lista">-</span> 6 = 1</span></li>
+                    </ul>
+            <h2 id="operadoresdeatribuicao">Operadores de Atribuição</h2>
+                <p>Operadores de Atribuição são todos aqueles onde nós atribuímos um determinado valor á uma variável, ou modificamos o valor que uma variável já possuí utilizando outras formas de operação.</p>
+                <p>Entre os operadores de Atribuição temos os seguintes modelos:</p>
+                    <ul>
+                        <li id="atribuicaosimples"><span id="lista">Atribuição Simples</span></br>É onde nós fazemos simples atribuições a uma variável, ou atribuímos uma variável dentro de outra variável, como nos exemplos abaixo:</br>
+                            <span id="expl">var <span id="adic">a</span> = 5 + 3&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">var <span id="adic">a</span> = 8</span></br>
+                            <span id="expl">var <span id="adic">b</span> = <span id="adic">a</span> % 5&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">var <span id="adic">b</span> = 3</span></br>
+                            <span id="expl">var <span id="adic">c</span> = 5 * <span id="adic">b</span> ** 2&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="adic">c</span> = 5 * 9&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">var <span id="adic">c</span> = 45</span></br>
+                            <span id="expl">var <span id="adic">d</span> = 10 - <span id="adic">a</span> / 2&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="adic">d</span> = 10 - 4&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">var <span id="adic">d</span> = 6</span></br>
+                            <span id="expl">var <span id="adic">e</span> = 6 * 2 / <span id="adic">d</span>&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="adic">e</span> = 12 / <span id="adic">d</span>&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">var <span id="adic">e</span> = 2</span></br>
+                            <span id="expl">var <span id="adic">f</span> = <span id="adic">b</span> % <span id="adic">e</span> + 4 / <span id="adic">e</span>&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="adic">f</span> = 1 + 2&nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;<span id="lista">var <span id="adic">f</span> = 3</span>
+                        </li></br>
+                        <li id="autoatribuicao"><span id="lista">Auto-Atribuição</span></br>
+                            É quando nós mudamos o valor de uma variável atribuíndo o valor dela sobre si mesma acrescentando algum tipo de operação, como nos exemplos abaixo:</br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">3</span></span></br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> + 4 &nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="lista">n</span> = <span id="lista">7</span></br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> - 5 &nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="lista">n</span> = <span id="lista">2</span></br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> * 4 &nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="lista">n</span> = <span id="lista">8</span></br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> / 2 &nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="lista">n</span> = <span id="lista">4</span></br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> ** 2 &nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="lista">n</span> = <span id="lista">16</span></br>
+                            <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> % 5 &nbsp;&nbsp;&nbsp;&nbsp;=>&nbsp;&nbsp;&nbsp;&nbsp;var <span id="lista">n</span> = <span id="lista">1</span></br>
+                            <span id="adic">(No exemplo acima vimos auto-atribuições na variável "n" em todos os exemplos de operadores aritméticos, onde o valor da variável "n" começa com "3" e termina com "1".)</span>
+                        </li></br>
+                        <li id="autoatribuicaosimplificada"><span id="lista">Auto-Atribuição Simplificada</span></br>
+                            É quando nós mudamos o valor de uma variável atribuíndo o valor dela sobre si mesma acrescentando algum tipo de operação, porém com a vantagem de ser mais simplificada do que a auto-atribuição simples,como nos exemplos abaixo:</br></br>
+                            <span id="expl">var <span id="lista">n</span> = <span id="lista">n</span> + 2;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poderíamos trocar por:&nbsp;&nbsp;&nbsp;<span id="expl">var <span id="lista">n +=</span> 2;</span></br>
+                            <span id="expl">var <span id="lista">n</span> = <span id="lista">n</span> - 2;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poderíamos trocar por:&nbsp;&nbsp;&nbsp;<span id="expl">var <span id="lista">n -=</span> 2;</span></br>
+                            <span id="expl">var <span id="lista">n</span> = <span id="lista">n</span> * 2;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poderíamos trocar por:&nbsp;&nbsp;&nbsp;<span id="expl">var <span id="lista">n *=</span> 2;</span></br>
+                            <span id="expl">var <span id="lista">n</span> = <span id="lista">n</span> / 2;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poderíamos trocar por:&nbsp;&nbsp;&nbsp;<span id="expl">var <span id="lista">n /=</span> 2;</span></br>
+                            <span id="expl">var <span id="lista">n</span> = <span id="lista">n</span> ** 2;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poderíamos trocar por:&nbsp;&nbsp;&nbsp;<span id="expl">var <span id="lista">n **=</span> 2;</span></br>
+                            <span id="expl">var <span id="lista">n</span> = <span id="lista">n</span> % 2;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poderíamos trocar por:&nbsp;&nbsp;&nbsp;<span id="expl">var <span id="lista">n %=</span> 2;</span>
+                        </li></br>
+                        <li id="autoincremento"><span id="lista">Auto-Incremento e Auto-Decremento</span></br>
+                            <p>Entre os operadores de atribuição temos também o "incremento" e o "decremento", que nada mais são do que auto-atribuições simplificadas onde desejamos acrescentar ou retirar apenas o valor de "1". Por estarem num formato ainda mais simples que as auto-atribuições simplificadas, podemos ganhar muito tempo durante a escrita de linhas de código. Vejamos alguns exemplos abaixo:</p></br>
+                            <span id="lista">Incremento</span></br></br>
+                            Em vez de usarmos: <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> + 1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usaríamos: <span id="expl">var <span id="lista">n++</span> e pronto!!</br>
+                            <span id="adic">(Automáticamente o valor de "1" será acrescentado! Lembrando que o auto-incremento só pode adicionar o valor de "1", se fizermos <span id="lista">"n++2"</span> ou <span id="lista">"n+++++"</span>, vai dar <span id="lista">erro!!</span>)</span></br></br>
+                            <span id="lista">Decremento</span></br></br>
+                            Em vez de usarmos: <span id="expl">var <span id="adic">n</span> = <span id="adic">n</span> - 1</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usaríamos: <span id="expl">var <span id="lista">n--</span> e pronto!!</br>
+                            <span id="adic">(Automáticamente o valor de "1" será subtraído! Lembrando que o auto-decremento só pode subtrair o valor de "1", se fizermos <span id="lista">"n--2"</span> ou <span id="lista">"n-----"</span>, vai dar <span id="lista">erro!!</span>)</span></br></br>
+                        </li>
+                        <li id="preincremento"><span id="lista">Pré-Incremento e Pré-decremento</br></br></span>
+                            As atribuições de incremento e decremento adicionam ou subtraem o valor de "1" de uma variável <span id="expl">durante uma operação</span>. Existem uma forma simplificada de nós adicionarmos ou subtrairmos o valor de "1" <span id="expl">antes de uma operação acontecer</span>, que é usando o <span id="lista">pré-incremento</span> e o <span id="lista">pré-decremento</span>. Podemos fazer isso das seguintes maneiras:</br></br>
+                            <span id="lista">Pré-Incremento</span></br></br>
+                            Em vez de usarmos: <span id="expl">var <span id="adic">n++</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usaríamos: <span id="expl">var <span id="lista">++n</span></span> e pronto!!</br>
+                            <span id="adic">(O valor de "1" será somado ao valor da variável <span id="lista">antes</span> da operação.)</span></br></br>
+                            <span id="lista">Pré-Decremento</span></br></br>
+                            Em vez de usarmos: <span id="expl">var <span id="adic">n--</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usaríamos: <span id="expl">var <span id="lista">--n</span></span> e pronto!!</br>
+                            <span id="adic">(O valor de "1" será subtraído do valor da variável <span id="lista">antes</span> da operação.)</span>
+                        </li>
+                    </ul>
+            <h2 id="operadoresrelacionais">Operadores relacionais</h2>
+                <p>Operadores relacionais são aqueles que estabelecem algum tipo de relação entre dois valores ou mais gerando algum tipo de resposta booleana, ou seja true (verdadeiro) ou (false). <span id="adic">(É imporatante lembrar que em uma operação que existir operadores aritméticos e operadores relacionais, os operadores aritméticos tem a prioridade na ordem de precedência.)</span></p>
+                <p>Vejamos alguns tipos de operadores relacionais:</p></br>
+                    <ul>
+                        <li id="maior">"<span id="lista"> > </span>" (maior)</br></br>
+                            Este é o operador <span id="lista">"maior"</span>, ele estabelece uma relação entre dois valores e diz se um valor realmente é maior do que o outro valor determinado, isso vai gerar um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">5<span id="lista"> > </span>2 = <span id="adic">true</span></span></br></br>
+                        </li></br>
+                        <li id="menor">"<span id="lista"> < </span>" (menor)</br></br>
+                            Este é o operador <span id="lista">"menor"</span>, ele estabelece uma relação entre dois valores e diz se um valor realmente é menor do que o outro valor determinado, isso vai gerar um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">7<span id="lista"> < </span>4 = <span id="adic">false</span></span></br></br>
+                        </li></br>
+                        <li id="maiorouigual">"<span id="lista"> >= </span>" (maior ou igual)</br></br>
+                            Este é o operador <span id="lista">"maior ou igual"</span>, ele estabelece uma relação entre dois valores e diz se um valor realmente é maior ou igual ao outro valor determinado, isso vai gerar um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">8<span id="lista"> >= </span>8 = <span id="adic">true</span></span></br></br>
+                        </li></br>
+                        <li id="menorouigual">"<span id="lista"> <= </span>" (menor ou igual)</br></br>
+                            Este é o operador <span id="lista">"menor ou igual"</span>, ele estabelece uma relação entre dois valores e diz se um valor realmente é menor ou igual ao outro valor determinado, isso vai gerar um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">9<span id="lista"> <= </span>7 = <span id="adic">false</span></span></br></br>
+                        </li></br>
+                        <li id="igual">"<span id="lista"> == </span>" (igual)</br></br>
+                            Este é o operador <span id="lista">"igual"</span>, note que no JavaScript o sinal de "igual" é formado por dois sinais de igual da matemática comum, isso acontece por que no JavaScript, assim como em outras linguagens de programação, <span id="expl">o sinal de igual único recebe o nome de "recebe"</span>, ele é encarado como um <span id="expl">operador de atribuição</span> não como sinal de igual. Portanto, como forma de diferenciar o sinal de "recebe" do sinal de "igual", nós utilizamos o <span id="expl">igual duplo (" == ")</span>. Esse operador estabelece uma relação entre dois valores e diz se um valor realmente é igual ao outro valor determinado, isso vai gerar um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">5<span id="lista"> == </span>5 = <span id="adic">true</span></span></br></br>
+                        </li></br>
+                        <li id="diferente">"<span id="lista"> != </span>" (diferente)</br></br>
+                            Este é o operador <span id="lista">"diferente"</span>, ele é indicado assim por que o sinal de <span id="expl">" ! "</span> é encarado como símbolo de negação nas linguagens de programação, fazendo com que um <span id="expl">valor positivo se torne negativo</span>, e um <span id="expl">valor verdadeiro se torne falso</span>. Como esse símbolo está vindo antes do sinal de igual, ele seria como uma espécie de <span id="expl">negação do valor de igual</span>, ou seja, tudo áquilo que não é igual só pode ser diferente, e daí vem o seu nome <span id="expl">"diferente"</span>. Esse operador estabelece uma relação entre dois valores e diz se um valor realmente é diferente do que o outro valor determinado, isso vai gerar um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">4<span id="lista"> != </span>4 = <span id="adic">false</span></span></br>
+                        </li></br>
+                        <li id="igualcomrestricoes">"<span id="lista"> === </span>" (igual com restrições)</br></br>
+                            Este é o operador <span id="lista">"igualdade restrita"</span> que, diferente do operardor de igual, não tem apenas dois sinais de igual da matemática comum, mas sim <span id="expl">"3 sinais de igual"</span>, mesmo sendo diferente ele ainda é um sinal de igual, porém <span id="expl">com restrições</span>, como assim? Bom, se você perguntar ao JavaScript se <span id="expl">5 == '5'</span><span id="adic"> (Lembrando que tudo o que está entre áspas é encarado como uma string.)</span> o JavaScript vai dizer que estes valores são <span id="expl">"true"</span>, apesar de serem de tipos primitivos diferentes. Por que isso acontece? Acontece por que os valores <span id="expl">5</span> e <span id="expl">'5'</span> são de <span id="expl">grandezas iguais</span> apesar de serem de tipos diferentes. Para solucionar esse impasse, foi criado o operador <span id="expl">" === "</span> ou <span id="expl">"igual restrito"</span> que não permite que 2 valores, apesar de serem de grandezas iguais sejam encarados como iguais por serem de tipos diferentes, gerando um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">4<span id="lista"> === </span>'4' = <span id="adic">false</span></span></br>
+                        </li></br>
+                        <li id="desigualdadecomrestricoes">"<span id="lista"> !== </span>" (diferente com restrições)</br></br>
+                            Este é o operador <span id="lista">"desigualdade restrita"</span> que, diferente do operardor de diferente, não tem apenas 1 sinail de igual seguido do sinal de negação, mas sim <span id="expl">"2 sinais de igual"</span>, mesmo sendo diferente ele ainda é um sinal de desigualdade, porém <span id="expl">com restrições</span>, como assim? Bom, se você perguntar ao JavaScript se <span id="expl">5 != '5'</span><span id="adic"> (Lembrando que tudo o que está entre áspas é encarado como uma string.)</span> o JavaScript vai dizer que essa relação é <span id="expl">"false"</span>, apesar de serem de tipos primitivos diferentes. Por que isso acontece? Acontece por que os valores <span id="expl">5</span> e <span id="expl">'5'</span> são de <span id="expl">grandezas iguais</span> apesar de serem de tipos diferentes. Para solucionar esse impasse, foi criado o operador <span id="expl">" !== "</span> ou <span id="expl">"desigualdade restrita"</span> que não permite que 2 valores, apesar de serem de grandezas iguais sejam encarados como iguais por serem de tipos diferentes, gerando um resultado booleano, dizendo se a nossa afirmação é <span id="adic">true</span> ou <span id="adic">false</span>. Por exemplo:</br></br>
+                            <span id="expl">4<span id="lista"> !== </span>'4' = <span id="adic">true</span></span></br>
+                        </li></br>
+                    </ul>
+                <div id="exc">
+                    <p>Observações:</p>
+                    <p>Entre os operadores relacionais <span id="lista">não existe uma ordem de precedência</span>, o operador que vier primeiro em uma expressão, será aquele que vai ser feito.</p>
+                </div>
+            <h2 id="operadoreslogicos">Operadores Lógicos</h2>
+                <p>Os operadores Lógicos são aqueles que fazem uso das portas lógicas booleanas não somente para fazer comparações entre variáveis, mas para <span id="expl">fazer comparações entre operações relacionais inteiras gerando valores de <span id="lista">true</span> ou <span id="lista">false</span>.</span></p>
+                <p><span id="adic">(Lembrando que, na ordem de precedêcia entre os tipos de operadores, os operadores lógicos são aqueles que vêm em 3º lugar, perdendo para os operadores aritméticos que vem em 1º lugar e para os operadores relacionais que vem em 2º lugar.) </span></p>
+                <p>Vejamos agora alguns exemplos de operadores lógicos</p></br>
+                    <ul>
+                        <li id="negacao">" <span id="lista">!</span> " (negação)</br>
+                        Esse é o valor de <span id="lista">"negação"</span> no JavaScript, assim como também em outras linguagens de programação. E ele faz com que todo valor seja negado, ou seja, <span id="adic">invertido para um valor contrário</span>, ele é a famosa porta booleana "<span id="adic">NOT</span>". Nós o utilizamos da seguinte maneira:</br></br>
+                        <span id="expl">var = <span id="lista">!</span> 2 * 8 > 20</span></br>
+                        <span id="expl">var = <span id="lista">!</span> 16 > 20</span></br>
+                        <span id="expl">var = <span id="lista">!</span> false</span></br>
+                        <span id="expl">var = <span id="lista">true</span></span></br></br>
+                        <span id="adic">(Como você pode ver no exemplo acima, o valor que deveria gerar um false, por que 16 não é > (maior) que 20, foi invertido para um true, graças ao operador de negação.)</span>
+                        </li></br></br>
+                        <li id="conjuncao">" <span id="lista">&&</span> " (conjunção)</br>
+                        Esse é o valor de <span id="lista">"conjunção"</span>, no JavaScript, assim como também em outras linguagens de programação, esse operador faz a comparação entre duas operações relacionais e faz o papel da famosa porta booleana<span id="lista"> AND</span>.</br>
+                        Na porta <span id="lista">AND</span> é feita uma comparação entre dois valores que podem gerar <span id="adic">true</span> ou <span id="adic">false</span>, o operador <span id="lista">AND</span> só irá retornar o valor <span id="adic">true</span> se ambos os valores das operações também tiverem resultado <span id="adic">true</span>, qualquer outra comparação só pode gerar valor <span id="adic">false</span>. O exemplo a seguir exemplifica bem os valores possíveis de serem gerados em um operador <span id="lista">&&</span>:</br></br>
+                        <span id="expl">true <span id="lista">&&</span> true = <span id="lista">true</span></span></br>
+                        <span id="expl">true <span id="lista">&&</span> false = <span id="lista">false</span></span></br>
+                        <span id="expl">false <span id="lista">&&</span> true = <span id="lista">false</span></span></br>
+                        <span id="expl">false <span id="lista">&&</span> false = <span id="lista">false</span></span></br></br>
+                        Nós o utilizamos da seguinte maneira:</br></br>
+                        <span id="expl">var = 2 * 8 > 20 <span id="lista">&&</span> 4 * 6 <= 24</span></br>
+                        <span id="expl">var = 16 > 20 <span id="lista">&&</span> 24 <= 24</span></br>
+                        <span id="expl">var = false <span id="lista">&&</span> true</span></br>
+                        <span id="expl">var = <span id="lista">false</span></span></br></br>
+                        <span id="adic">(Como você pode ver no exemplo acima, o valor gerado na conjunção resultou num false, por que as duas operações relacionais não geraram um true. Para o resultado ser true, seria necessário que as duas operações gerassem true, e não apenas uma delas. <span id="lista">É como se fizéssemos uma comparação onde você me pede duas canetas, uma azul e (AND) uma vermelha, eu tenho que lhe entregar as 2 para que você fique satisfeito.</span> Na porta lógica AND se dá o mesmo, a porta AND só ficará satisfeita e retornará o valor como "true", se os 2 valores nas operações relacionais também gerarem um "true", qualquer outro resultado iria gerar um "false" na porta lógica.)</span>
+                        </li></br></br>
+                        <li id="disjuncao">" <span id="lista">||</span> " (disjunção)</br></br>
+                        Esse é o valor de <span id="lista">"disjunção"</span>, no JavaScript, assim como também em outras linguagens de programação, esse operador faz a comparação entre duas operações relacionais e faz o papel da porta booleana<span id="lista"> OR</span>.</br>
+                        Na porta <span id="lista">OR</span> é feita uma comparação entre dois valores que podem gerar <span id="adic">true</span> ou <span id="adic">false</span>, o operador <span id="lista">OR</span> retorna o valor <span id="adic">true</span> se qualquer um dos valores nas operações relacionais resultar em <span id="adic">true</span>. Caso contrário, se ambos os valores resultarem em <span id="adic">false</span>, o resultado da operação também será <span id="adic">false</span>. Podemos entender isso bem analisando todos os resultados possíveis de uma operação de disjunção no exemplo abaixo:</br></br>
+                        <span id="expl">true <span id="lista">||</span> true = <span id="lista">true</span></span></br>
+                        <span id="expl">true <span id="lista">||</span> false = <span id="lista">true</span></span></br>
+                        <span id="expl">false <span id="lista">||</span> true = <span id="lista">true</span></span></br>
+                        <span id="expl">false <span id="lista">||</span> false = <span id="lista">false</span></span></br></br>
+                        Nós o utilizamos da seguinte maneira:</br></br>
+                        <span id="expl">var = 2 * 8 > 20 <span id="lista">||</span> 4 * 6 <= 24</span></br>
+                        <span id="expl">var = 16 > 20 <span id="lista">||</span> 24 <= 24</span></br>
+                        <span id="expl">var = false <span id="lista">||</span> true</span></br>
+                        <span id="expl">var = <span id="lista">true</span></span></br></br>
+                        <span id="adic">(Como você pode ver no exemplo acima, o valor gerado na disjunção resultou num true, por que ao menos 1 das operações relacionais gerou um true. Para que o resultado fosse false, seria necessário que as duas operações gerassem false, e não apenas uma delas. <span id="lista">É como se fizéssemos uma comparação onde você me pede uma caneta, ela pode ser azul ou (OR) vermelha, tanto faz a cor, se eu lhe der ao menos uma delas, você já estará satisfeito.</span> Na porta lógica OR se dá o mesmo, desde que ao menos um dos valores gere um "true", o porta OR já está satisfeita e retornará o valor como "true".)</span>
+                        </li></br>
+                    </ul>
+                <div id="exc">
+                    <p id="precedencialogicos">Ordem de Precedência dos Operadores Lógicos</p>
+                    <p>Vale lembrar que, quando estamos falando de operadores lógicos em uma única expressão, a ordem de precedência entre eles é a seguinte:</p>
+                        <ul>
+                            <li><span id="lista">1º Lugar - </span>Operador de Negação ( <span id="lista">!</span> );</li>
+                            <li><span id="lista">2º Lugar - </span>Operador de Conjunção ( <span id="lista">&&</span> );</li>
+                            <li><span id="lista">1º Lugar - </span>Operador de Disjunção ( <span id="lista">||</span> );</li>
+                        </ul>
+
+                </div>
+            <h2 id="operadoresternarios">Operador Ternário</h2>
+                <p>O operador ternário recebe esse nome por que ele é um único operador que faz a função de três operadores. O operador ternário tem a função de <span id="expl">retornar o valor de uma determinada operação lógica ou relacional gerando um valor diferente caso o resultado seja <span id="lista">true</span> ou <span id="lista">false</span>.</span></p>
+                <p><span id="adic">(Lembrando que, na ordem de precedêcia entre os tipos de operadores, o operador ternário está em último lugar, perdendo para os operadores aritméticos que vem em 1º lugar, para os operadores relacionais que vem em 2º lugar e para os operadores lógicos que vêm em 3º lugar) </span></p>
+                <p>A sintáxe do operador ternário é a seguinte:</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span id="lista"> ? : </span>"</p>
+                <p>onde colocamos os valores de:</br>
+                <span id="expl">teste lógico <span id="lista">?</span> valor se <span id="adic">"true"</span> <span id="lista">:</span> valor se <span id="adic">"false"</span></span></p>
+                <p>Vejamos como utilizar esse operador em um caso real:</br></br>
+                Digamos que uma determinada variável <span id="expl">"idade"</span> receba o valor de <span id="expl">"17"</span></br></br>
+                <span id="expl">var idade = <span id="adic">17</span></span></br></br>
+                E digamos que desejamos saber se a pessoa que atribuíu a sua idade a variável <span id="expl">"idade"</span> já é maior de idade ou não. Para isso usaremos o operador ternário " <span id="lista">? :</span> "</span></br></br>
+                <span id="expl">var idade = <span id="adic">17</span></span></br>
+                <span id="expl">idade <span id="adic">>= 18 </span> <span id="lista">?</span> 'maior' <span id="lista">:</span> 'menor';</span></br>
+                <span id="expl">var idade = <span id="lista">'menor'</span>;</span></br></br>
+                <span id="adic">(Perceba que colocamos o valor do teste lógico <span id="lista">(idade >= 18)</span> e o valor da reposta "true" <span id="lista">('maior')</span> entre o sinal de interrogação " <span id="lista">?</span> ". E colocamos o valor da resposta "false" <span id="lista">('menor')</span> depois do sinal de " <span id="lista">:</span> "; Isso quer dizer que, caso a pessoa tenha a idade inferior a 18 anos, o operador ternário irá gerar a resposta 'menor', se ela tiver a idade igual ou superior a 18 anos, o operador irá gerar a resposta 'maior'.)</span>
+                </p>
+            <h2 id="relacaodeprecedenciadeoperadores">Relação de Precedência de Operadores</h2>
+                <p>A relação de precedência dos operadores se dá da seguinte maneira:</p>
+                <ul>
+                    <li><span id="lista">1º Lugar - </span>Tudo o que estiver dentro de <span id="expl">Parênteses <span id="lista">&nbsp;&nbsp;(  )</span></span> ;</li></br>
+                    <li><span id="lista">2º Lugar - </span>Operadores <span id="expl">Aritméticos<span id="lista">&nbsp;&nbsp; ** &nbsp;&nbsp;/ &nbsp;&nbsp;% &nbsp;&nbsp;* &nbsp;&nbsp;+ &nbsp;&nbsp;- &nbsp;</span></span> ;</li></br>
+                    <li><span id="lista">3º Lugar - </span>Operadores <span id="expl">Relacionais<span id="lista">&nbsp;&nbsp; >&nbsp;&nbsp; <&nbsp;&nbsp; >=&nbsp;&nbsp; <=&nbsp;&nbsp; ==&nbsp;&nbsp; !=&nbsp;&nbsp; ===&nbsp;&nbsp; !==&nbsp;&nbsp;</span></span> ;</li></br>
+                    <li><span id="lista">4º Lugar - </span>Operadores <span id="expl">Lógicos<span id="lista">&nbsp;&nbsp; !&nbsp;&nbsp; &&&nbsp;&nbsp; &nbsp;&nbsp;||&nbsp;&nbsp;</span></span> ;</li></br>
+                    <li><span id="lista">5º Lugar - </span>Operador <span id="expl">Ternário<span id="lista">&nbsp;&nbsp; ? :&nbsp;&nbsp;</span></span> ;</li></br>
+                </ul>
+    </div>
+</body>
+</html>

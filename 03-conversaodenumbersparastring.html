@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/textodasaulas.css"/>
+    <title>Matérias de JavaScript</title>
+</head>
+<body>
+    <div id="cabecalho">
+        <p style="margin: 0px;"><span id="verde">Matérias</span> <span id="rosa">de</span> <span id="laranja">JavaScript</span></p>
+        <p style="margin: 0px; font-size: 8pt;"><span id="rosapeq">desenvolvido</span> <span id="verdepeq">por</span> <span id="laranjapeq">Gabriel Ferreira Nobre</span></p>
+        <ul id="menu">Menu de Artigos
+            <li class="itens"><a href="03-conversaodenumbersparastring.html">Conversão de Numbers para Strings</a></li>
+            <li class="itens"><a href="04-conversaodestringparanumbers">Conversão de Strings para Numbers</a></li>
+            <li class="itens"><a>Formatação de Numbers</a></li>
+            <li class="itens"><a>Formatação de Strings</a></li>
+            <li class="itens"><a href="01-tiposprimitivos.html">Tipos Primitivos</a></li>
+            <li class="itens"><a href="02-variaveis.html">Variáveis</a></li>
+        </ul>
+    </div>
+    <div id="lateral">
+        <aside id="lateral">
+            <h1>Nessa página você vai encontrar:</h1>
+            <ul id="lateral">
+                <li><a href="#qualaimportanciadaconversaoentrestringsenumbers">Qual a importância da conversão entre Strings e Numbers?</a></li>
+                <li><a href="#porqueconverternumbersemstrings">Por que converter Numbers em Strings?</a></li>
+                <li><a href="#tiposdeconversoresstring">Tipos de conversores String</a></li>
+                <li><a href="#comopodemosutilizarosconversoresstring">Como Podemos Utilizar os Conversores String?</a></li>
+                <li><a href="#string">String( )</a></li>
+                <li><a href="#tostring">.toString( )</a></li>
+            </ul>
+        </aside>
+    </div>
+    <div id="paginacentral" style="margin-top: -475px;">
+    <h1>Conversão de Numbers para Strings</h1>
+        <h2 id="qualaimportanciadaconversaoentrestringsenumbers">Qual a importância da conversão entre Strings e Numbers?</h2>
+            <p>É de total importância, afinal o JavaScript trabalha com funções numéricas, booleanas, strings e de objetos ao mesmo tempo. A identificação correta do valor que nós estamos trabalhando é vital para que o JavaScript entenda como ele deve trabalhar de acordo com determinado valor.</p>
+        <h2 id="porqueconverternumbersemstrings">Por que converter Numbers em Strings?</h2>
+            <p>Imagine você precisando de obter uma numeração ou conjunto de caracteres numéricos que não representam números de verdade, na verdade se referem a identificação de uma pessoa, um documento ou uma senha, imagine a confusão que seria você tentar concatenar esses números todos juntos, você não quer somá-los, você quer simplesmente juntá-los. Bem, fazer isso com <a href="tiposprimitivos.html" target="_blank">tipos primitivos</a> Number não iria dar certo, por isso você precisa de um conversor de Numbers para Strings.</p>
+            <p>Veja o exemplo errado de um código que na verdade deseja obter strings e não numbers:</p>
+            <p><span id="adic">var n1 = Number(window.prompt("Por favor digite o número do dia do seu nascimento: "));</span></p>
+            <p><span id="adic">var n2 = Number(window.prompt("Por favor digite o número da casa onde você mora: "));</span></p>
+            <p><span id="adic">var s = n1 + n2;</span></p>
+            <p><span id="adic">window.alert('Geramos uma senha com a combinação dos números do dia do seu nascimento e da casa onde você mora, a senha é ${s}`);</p>
+            <p><span id="expl">(Esse código não vai conseguir fazer a concatenação dos números para gerar a senha, por que os valores que as variáveis vão recerber estão convertidos para Numbers em vez de strings, por isso invés de concatenar os valores eles serão somados. Para ver um exemplo prático disso entre neste <a href="../exercicios/ex005.html")>link</a>.)</span></p>
+        <h2 id="tiposdeconversoresstring">Tipos de conversores Strings</h2>
+            <ul>
+                <li><span id="lista">String( ) - </span>Esse é um modelo de conversor string onde nós colocamos todo o valor gerador da variável dentro dos parêntenses da string;</li>
+                <li><span id="lista">.toString( ) - </span>Esse é um modelo de conversor string onde nós colocamos todo o valor gerador da variável antes do conversor ".toString( )" e deixamos o parêntenses depois dele em aberto;</li>
+            </ul>
+        <h2 id="comopodemosutilizarosconversoresstring">Como Podemos Utilizar os Conversores String?</h2>
+            <p id="string"><span id="lista">String( )</span></p>
+            <p>Podemos utilizá-lo da seguinte forma:</p>
+            <p>var n1 = <span id="lista">String(</span>window.prompt("Por favor digite o número do dia do seu nascimento: ")<span id="lista">)</span>;</span></p>
+            <p>var n2 = <span id="lista">String(</span>window.prompt("Por favor digite o número da casa onde você mora: ")<span id="lista">)</span>;</span></p>
+            <p>var s = n1 + n2;</p>
+            <p>window.alert('Geramos uma senha com a combinação dos números do dia do seu nascimento e da casa onde você mora, a senha é ${s}`);</p>
+            <p><span id="expl">(Note que desta vez, em vez de usar um conversor "Number()", nós utilizamos um conversor <strong>"String()"</strong> para fazer a conversão direta dos valores que as variáveis vão receber. <span id="adic">(Apesar de sabermos que não era necessária essa conversão, afinal o JavaScript já recebe valores como strings como forma padrão, bastava apenas o "window.prompt()".)</span> Para ver como isso funciona na prática é só entrar neste <a href="../exercicios/ex006.html">link</a>.)</span></p>
+            <p id="tostring"><span id="lista">.toString( )</span></p>
+            <p>Podemos utilizá-lo da seguinte forma:</p>
+            <p>var n1 = Number(window.prompt("Por favor digite o número do dia do seu nascimento: "));</span></p>
+            <p>var n2 = Number(window.prompt("Por favor digite o número da casa onde você mora: "));</span></p>
+            <p>var s = n1<span id="lista">.toString()</span> + n2<span id="lista">.toString()</span>;</p>
+            <p>window.alert('Geramos uma senha com a combinação dos números do dia do seu nascimento e da casa onde você mora, a senha é ${s}`);</p>
+            <p><span id="expl">(Note que desta vez, mesmo usando o conversor "Number()", ainda conseguimos fazer a conversão por utilizar <strong>".toString()"</strong> após as variáveis n1 e n2. Para ver como isso funciona na prática é só entrar neste <a href="../exercicios/ex007.html">link</a>.)</span></p>
+    </div>
+</body>
+</html>
